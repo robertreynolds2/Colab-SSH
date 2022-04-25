@@ -18,8 +18,9 @@ read -p "choose ngrok region: " CRP
 echo "======================="
 echo Updating Please Wait
 echo "======================="
-apt update && apt upgrade -y > /dev/null 2>&1
-apt install openssh-server > /dev/null 2>&1
+apt update && apt upgrade -y
+clear
+apt install openssh-server
 mkdir -p /var/run/sshd
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
